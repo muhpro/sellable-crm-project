@@ -17,8 +17,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth.views import LoginView, LogoutView
 from leads.views import landing_page, LandingPageView, SignupView
+from django.contrib.auth.views import (
+    LoginView, 
+    LogoutView, 
+    PasswordResetView, 
+    PasswordResetDoneView,
+    PasswordResetConfirmView,
+    PasswordResetCompleteView
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
